@@ -13,7 +13,7 @@ mkdir -p "$BACKUP_DIR"
 
 cp -R $(ls | grep -v 'Rezerve') "$BACKUP_DIR/"
 
-
+# find "$PWD/Rezerve" -mindepth 1 -maxdepth 1 -type d -not -name "$DATE" -exec rm -rf {} \;
 for DIR in "$PWD/Rezerve/"*; do
   if [[ "$DIR" != "$PWD/Rezerve/$DATE" ]]; then
     rm -rf "$DIR"
